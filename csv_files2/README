@@ -1,0 +1,952 @@
+Found 12 CSV files
+
+====================================================================================================
+
+====================================================================================================
+FILE: Games.csv
+====================================================================================================
+Rows:       73,279
+Columns:    23
+Memory:     52.48 MB
+
+COLUMNS:
+  gameId                              dtype=int64        unique=73,279     missing=  0.00% sample=['42500405', '42500404', '42500403']
+  gameDateTimeEst                     dtype=object       unique=34,922     missing=  0.00% sample=['2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00']
+  hometeamCity                        dtype=object       unique=47         missing=  0.01% sample=['San Antonio', 'New York', 'New York']
+  hometeamName                        dtype=object       unique=43         missing=  0.00% sample=['Spurs', 'Knicks', 'Knicks']
+  hometeamId                          dtype=int64        unique=34         missing=  0.00% sample=['1610612759', '1610612752', '1610612752']
+  awayteamCity                        dtype=object       unique=51         missing=  0.01% sample=['New York', 'San Antonio', 'San Antonio']
+  awayteamName                        dtype=object       unique=47         missing=  0.00% sample=['Knicks', 'Spurs', 'Spurs']
+  awayteamId                          dtype=int64        unique=38         missing=  0.00% sample=['1610612752', '1610612759', '1610612759']
+  homeScore                           dtype=int64        unique=130        missing=  0.00% sample=['90', '107', '111']
+  awayScore                           dtype=int64        unique=130        missing=  0.00% sample=['94', '106', '115']
+  winner                              dtype=int64        unique=34         missing=  0.00% sample=['1610612752', '1610612752', '1610612759']
+  gameType                            dtype=object       unique=8          missing=  0.00% sample=['Playoffs', 'Playoffs', 'Playoffs']
+  gameSubtype                         dtype=object       unique=3          missing= 99.90% sample=['Global Games', 'Global Games', 'in-season-knockout']
+  gameLabel                           dtype=object       unique=32         missing= 94.48% sample=['NBA Finals', 'NBA Finals', 'NBA Finals']
+  gameSubLabel                        dtype=object       unique=24         missing= 99.55% sample=['Game 5', 'Game 4', 'Game 3']
+  seriesGameNumber                    dtype=object       unique=15         missing= 92.05% sample=['Game 5', 'Game 4', 'Game 3']
+  attendance                          dtype=float64      unique=735        missing= 98.10% sample=['18984.0', '19812.0', '19812.0']
+  arenaId                             dtype=int64        unique=274        missing=  0.00% sample=['1000118', '30', '30']
+  arenaName                           dtype=object       unique=47         missing= 98.09% sample=['Frost Bank Center', 'Madison Square Garden', 'Madison Square Garden']
+  arenaCity                           dtype=object       unique=47         missing= 98.09% sample=['San Antonio', 'New York', 'New York']
+  arenaState                          dtype=object       unique=28         missing= 98.10% sample=['TX', 'NY', 'NY']
+  officials                           dtype=object       unique=1,336      missing= 98.09% sample=['James Capers, Scott Foster, Mitchell Ervin, Tyler Ford', 'Courtney Kirkland, Zach Zarba, James Williams, Justin Van Duyne', 'Marc Davis, John Goble, Curtis Blair, Nick Buchert']
+  gameDate                            dtype=object       unique=34,922     missing=  0.00% sample=['2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'hometeamId', 'awayteamId', 'gameType', 'gameSubtype', 'gameLabel', 'gameSubLabel', 'seriesGameNumber', 'gameDate']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameDateTimeEst: 38,357 duplicated values
+  hometeamId: 73,245 duplicated values
+  awayteamId: 73,241 duplicated values
+  gameType: 73,271 duplicated values
+  gameSubtype: 73,275 duplicated values
+  gameLabel: 73,246 duplicated values
+  gameSubLabel: 73,254 duplicated values
+  seriesGameNumber: 73,263 duplicated values
+  gameDate: 38,357 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 73,279
+  Rows / unique game: 1.00
+  Min rows per game: 1
+  Max rows per game: 1
+  Median rows per game: 1.0
+  Most common rows/game:
+{1: 73279}
+
+TEAM-RELATED COLUMNS:
+['hometeamCity', 'hometeamName', 'hometeamId', 'awayteamCity', 'awayteamName', 'awayteamId']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00', '2026-06-05 20:30:00', '2026-06-03 20:30:00']
+  gameDate: ['2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00', '2026-06-05 20:30:00', '2026-06-03 20:30:00']
+
+NUMERIC COLUMNS:
+['gameId', 'hometeamId', 'awayteamId', 'homeScore', 'awayScore', 'winner', 'attendance', 'arenaId']
+
+====================================================================================================
+FILE: LeagueSchedule24_25.csv
+====================================================================================================
+Rows:       1,408
+Columns:    15
+Memory:     0.65 MB
+
+COLUMNS:
+  gameId                              dtype=int64        unique=1,408      missing=  0.00% sample=['12400001', '12400002', '12400003']
+  gameDateTimeEst                     dtype=object       unique=914        missing=  0.00% sample=['2024-10-04 12:00:00+00:00', '2024-10-04 21:00:00+00:00', '2024-10-04 22:30:00+00:00']
+  gameDay                             dtype=object       unique=7          missing=  0.00% sample=['Fri', 'Fri', 'Fri']
+  arenaCity                           dtype=object       unique=45         missing=  0.00% sample=['Abu Dhabi', 'Salt Lake City', 'Palm Desert']
+  arenaState                          dtype=object       unique=30         missing=  0.57% sample=['UT', 'CA', 'HI']
+  arenaName                           dtype=object       unique=46         missing=  0.00% sample=['Etihad Arena', 'Delta Center', 'Acrisure Arena']
+  gameLabel                           dtype=object       unique=13         missing= 82.46% sample=['Preseason', 'Preseason', 'Preseason']
+  gameSubLabel                        dtype=object       unique=24         missing= 88.21% sample=['NBA Abu Dhabi Game', 'NBA Abu Dhabi Game', 'NBA Montreal Game']
+  gameSubtype                         dtype=object       unique=3          missing= 94.53% sample=['Global Games', 'Global Games', 'Global Games']
+  gameSequence                        dtype=int64        unique=15         missing=  0.00% sample=['1', '2', '3']
+  seriesGameNumber                    dtype=float64      unique=7          missing= 94.03% sample=['1.0', '2.0', '3.0']
+  seriesText                          dtype=object       unique=55         missing= 92.68% sample=['Neutral Site', 'Neutral Site', 'Neutral Site']
+  weekNumber                          dtype=int64        unique=36         missing=  0.00% sample=['0', '0', '0']
+  hometeamId                          dtype=int64        unique=31         missing=  0.00% sample=['1610612743', '1610612762', '1610612747']
+  awayteamId                          dtype=int64        unique=35         missing=  0.00% sample=['1610612738', '15020', '1610612750']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'gameDay', 'gameLabel', 'gameSubLabel', 'gameSubtype', 'gameSequence', 'seriesGameNumber', 'hometeamId', 'awayteamId']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameDateTimeEst: 494 duplicated values
+  gameDay: 1,401 duplicated values
+  gameLabel: 1,394 duplicated values
+  gameSubLabel: 1,383 duplicated values
+  gameSubtype: 1,404 duplicated values
+  gameSequence: 1,393 duplicated values
+  seriesGameNumber: 1,400 duplicated values
+  hometeamId: 1,377 duplicated values
+  awayteamId: 1,373 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 1,408
+  Rows / unique game: 1.00
+  Min rows per game: 1
+  Max rows per game: 1
+  Median rows per game: 1.0
+  Most common rows/game:
+{1: 1408}
+
+TEAM-RELATED COLUMNS:
+['hometeamId', 'awayteamId']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2024-10-04 12:00:00+00:00', '2024-10-04 21:00:00+00:00', '2024-10-04 22:30:00+00:00', '2024-10-05 19:00:00+00:00', '2024-10-06 10:00:00+00:00']
+
+NUMERIC COLUMNS:
+['gameId', 'gameSequence', 'seriesGameNumber', 'weekNumber', 'hometeamId', 'awayteamId']
+
+====================================================================================================
+FILE: LeagueSchedule25_26.csv
+====================================================================================================
+Rows:       1,400
+Columns:    17
+Memory:     0.92 MB
+
+COLUMNS:
+  gameId                              dtype=int64        unique=1,400      missing=  0.00% sample=['42500405', '42500404', '42500403']
+  gameDateTimeEst                     dtype=object       unique=945        missing=  0.00% sample=['2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00']
+  gameDay                             dtype=object       unique=7          missing=  0.00% sample=['Sat', 'Wed', 'Mon']
+  homeTeamId                          dtype=int64        unique=34         missing=  0.00% sample=['1610612759', '1610612752', '1610612752']
+  awayTeamId                          dtype=int64        unique=38         missing=  0.00% sample=['1610612752', '1610612759', '1610612759']
+  homeTeamName                        dtype=object       unique=34         missing=  0.00% sample=['Spurs', 'Knicks', 'Knicks']
+  homeTeamCity                        dtype=object       unique=30         missing=  0.50% sample=['San Antonio', 'New York', 'New York']
+  awayTeamName                        dtype=object       unique=38         missing=  0.00% sample=['Knicks', 'Spurs', 'Spurs']
+  awayTeamCity                        dtype=object       unique=34         missing=  0.50% sample=['New York', 'San Antonio', 'San Antonio']
+  arenaName                           dtype=object       unique=47         missing=  0.00% sample=['Frost Bank Center', 'Madison Square Garden', 'Madison Square Garden']
+  arenaCity                           dtype=object       unique=47         missing=  0.00% sample=['San Antonio', 'New York', 'New York']
+  arenaState                          dtype=object       unique=28         missing=  0.64% sample=['TX', 'NY', 'NY']
+  gameLabel                           dtype=object       unique=19         missing= 82.07% sample=['NBA Finals', 'NBA Finals', 'NBA Finals']
+  gameSubLabel                        dtype=object       unique=23         missing= 87.86% sample=['Game 5', 'Game 4', 'Game 3']
+  gameSubtype                         dtype=object       unique=3          missing= 94.71% sample=['Global Games', 'Global Games', 'in-season-knockout']
+  seriesGameNumber                    dtype=object       unique=7          missing= 93.93% sample=['Game 5', 'Game 4', 'Game 3']
+  weekNumber                          dtype=int64        unique=35         missing=  0.00% sample=['34', '34', '34']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'gameDay', 'homeTeamId', 'awayTeamId', 'gameLabel', 'gameSubLabel', 'gameSubtype', 'seriesGameNumber']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameDateTimeEst: 455 duplicated values
+  gameDay: 1,393 duplicated values
+  homeTeamId: 1,366 duplicated values
+  awayTeamId: 1,362 duplicated values
+  gameLabel: 1,380 duplicated values
+  gameSubLabel: 1,376 duplicated values
+  gameSubtype: 1,396 duplicated values
+  seriesGameNumber: 1,392 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 1,400
+  Rows / unique game: 1.00
+  Min rows per game: 1
+  Max rows per game: 1
+  Median rows per game: 1.0
+  Most common rows/game:
+{1: 1400}
+
+TEAM-RELATED COLUMNS:
+['homeTeamId', 'awayTeamId', 'homeTeamName', 'homeTeamCity', 'awayTeamName', 'awayTeamCity']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00', '2026-06-05 20:30:00', '2026-06-03 20:30:00']
+
+NUMERIC COLUMNS:
+['gameId', 'homeTeamId', 'awayTeamId', 'weekNumber']
+
+====================================================================================================
+FILE: NBAPlayersStatistics23:24.csv
+====================================================================================================
+Rows:       28,346
+Columns:    25
+Memory:     11.79 MB
+
+COLUMNS:
+  Player                              dtype=object       unique=574        missing=  0.00% sample=['Nikola Jokić', 'Devin Booker', 'LeBron James']
+  Tm                                  dtype=object       unique=30         missing=  0.00% sample=['DEN', 'PHO', 'LAL']
+  Opp                                 dtype=object       unique=30         missing=  0.00% sample=['LAL', 'GSW', 'DEN']
+  Res                                 dtype=object       unique=2          missing=  0.00% sample=['W', 'W', 'L']
+  MP                                  dtype=float64      unique=2,729      missing=  0.00% sample=['36.27', '36.97', '29.0']
+  FG                                  dtype=int64        unique=25         missing=  0.00% sample=['12', '13', '10']
+  FGA                                 dtype=int64        unique=42         missing=  0.00% sample=['22', '21', '16']
+  FG%                                 dtype=float64      unique=209        missing=  0.00% sample=['0.545', '0.619', '0.625']
+  3P                                  dtype=int64        unique=13         missing=  0.00% sample=['3', '3', '1']
+  3PA                                 dtype=int64        unique=23         missing=  0.00% sample=['5', '8', '4']
+  3P%                                 dtype=float64      unique=74         missing=  0.00% sample=['0.6', '0.375', '0.25']
+  FT                                  dtype=int64        unique=23         missing=  0.00% sample=['2', '3', '0']
+  FTA                                 dtype=int64        unique=25         missing=  0.00% sample=['4', '3', '1']
+  FT%                                 dtype=float64      unique=70         missing=  0.00% sample=['0.5', '1.0', '0.0']
+  ORB                                 dtype=int64        unique=15         missing=  0.00% sample=['3', '1', '1']
+  DRB                                 dtype=int64        unique=21         missing=  0.00% sample=['10', '5', '7']
+  TRB                                 dtype=int64        unique=28         missing=  0.00% sample=['13', '6', '8']
+  AST                                 dtype=int64        unique=21         missing=  0.00% sample=['11', '8', '5']
+  STL                                 dtype=int64        unique=8          missing=  0.00% sample=['1', '1', '1']
+  BLK                                 dtype=int64        unique=11         missing=  0.00% sample=['1', '0', '0']
+  TOV                                 dtype=int64        unique=12         missing=  0.00% sample=['2', '6', '0']
+  PF                                  dtype=int64        unique=7          missing=  0.00% sample=['2', '4', '1']
+  PTS                                 dtype=int64        unique=60         missing=  0.00% sample=['29', '32', '21']
+  GmSc                                dtype=float64      unique=488        missing=  0.00% sample=['29.3', '23.7', '20.3']
+  Data                                dtype=object       unique=204        missing=  0.00% sample=['2023-10-24', '2023-10-24', '2023-10-24']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+[]
+
+DUPLICATES:
+  Exact duplicate rows: 516
+
+PLAYER-RELATED COLUMNS:
+['Player']
+
+NUMERIC COLUMNS:
+['MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'GmSc']
+
+====================================================================================================
+FILE: PlayerStatistics.csv
+====================================================================================================
+Rows:       1,669,922
+Columns:    40
+Memory:     1528.81 MB
+
+COLUMNS:
+  firstName                           dtype=object       unique=2,065      missing=  0.01% sample=['Josh', 'OG', 'Jeremy']
+  lastName                            dtype=object       unique=3,532      missing=  0.01% sample=['Hart', 'Anunoby', 'Sochan']
+  personId                            dtype=float64      unique=6,272      missing=  0.00% sample=['1628404.0', '1628384.0', '1631110.0']
+  gameId                              dtype=int64        unique=73,471     missing=  0.00% sample=['42500405', '42500405', '42500405']
+  gameDateTimeEst                     dtype=object       unique=34,982     missing=  0.21% sample=['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00']
+  playerteamCity                      dtype=object       unique=90         missing=  0.01% sample=['New York', 'New York', 'New York']
+  playerteamName                      dtype=object       unique=60         missing=  0.21% sample=['Knicks', 'Knicks', 'Knicks']
+  opponentteamCity                    dtype=object       unique=55         missing=  0.22% sample=['San Antonio', 'San Antonio', 'San Antonio']
+  opponentteamName                    dtype=object       unique=60         missing=  0.21% sample=['Spurs', 'Spurs', 'Spurs']
+  gameType                            dtype=object       unique=10         missing=  0.00% sample=['Playoffs', 'Playoffs', 'Playoffs']
+  gameLabel                           dtype=object       unique=35         missing= 92.97% sample=['NBA Finals', 'NBA Finals', 'NBA Finals']
+  gameSubLabel                        dtype=object       unique=24         missing= 93.71% sample=['Game 5', 'Game 5', 'Game 5']
+  seriesGameNumber                    dtype=object       unique=16         missing= 91.77% sample=['5', '5', '5']
+  win                                 dtype=float64      unique=2          missing=  0.21% sample=['1.0', '1.0', '1.0']
+  home                                dtype=float64      unique=2          missing=  0.21% sample=['0.0', '0.0', '0.0']
+  numMinutes                          dtype=object       unique=5,123      missing= 10.10% sample=['39.166666666666664', '32.78333333333333', '0.15']
+  points                              dtype=float64      unique=93         missing=  0.10% sample=['13.0', '11.0', '0.0']
+  assists                             dtype=float64      unique=31         missing=  0.10% sample=['2.0', '0.0', '0.0']
+  blocks                              dtype=float64      unique=17         missing=  0.10% sample=['0.0', '1.0', '0.0']
+  steals                              dtype=float64      unique=15         missing=  0.10% sample=['0.0', '3.0', '0.0']
+  fieldGoalsAttempted                 dtype=float64      unique=78         missing=  0.10% sample=['11.0', '11.0', '0.0']
+  fieldGoalsMade                      dtype=float64      unique=38         missing=  0.10% sample=['4.0', '3.0', '0.0']
+  fieldGoalsPercentage                dtype=float64      unique=505        missing=  0.10% sample=['0.364', '0.273', '0.0']
+  threePointersAttempted              dtype=float64      unique=35         missing=  0.10% sample=['6.0', '5.0', '0.0']
+  threePointersMade                   dtype=float64      unique=17         missing=  0.10% sample=['3.0', '1.0', '0.0']
+  threePointersPercentage             dtype=float64      unique=151        missing=  0.10% sample=['0.5', '0.2', '0.0']
+  freeThrowsAttempted                 dtype=float64      unique=39         missing=  0.10% sample=['3.0', '6.0', '0.0']
+  freeThrowsMade                      dtype=float64      unique=31         missing=  0.10% sample=['2.0', '4.0', '0.0']
+  freeThrowsPercentage                dtype=float64      unique=289        missing=  0.10% sample=['0.667', '0.667', '0.0']
+  reboundsDefensive                   dtype=float64      unique=36         missing=  0.10% sample=['8.0', '8.0', '0.0']
+  reboundsOffensive                   dtype=float64      unique=21         missing=  0.10% sample=['3.0', '0.0', '0.0']
+  reboundsTotal                       dtype=float64      unique=52         missing=  0.10% sample=['11.0', '8.0', '0.0']
+  foulsPersonal                       dtype=float64      unique=30         missing=  0.10% sample=['3.0', '5.0', '0.0']
+  turnovers                           dtype=float64      unique=27         missing=  0.10% sample=['1.0', '1.0', '0.0']
+  plusMinusPoints                     dtype=float64      unique=116        missing=  0.16% sample=['15.0', '2.0', '1.0']
+  playerteamId                        dtype=float64      unique=43         missing=  6.55% sample=['1610612752.0', '1610612752.0', '1610612752.0']
+  opponentteamId                      dtype=float64      unique=43         missing=  6.55% sample=['1610612759.0', '1610612759.0', '1610612759.0']
+  comment                             dtype=object       unique=7,891      missing= 91.01% sample=["DNP - Coach's Decision", "DNP - Coach's Decision", "DNP - Coach's Decision"]
+  startingPosition                    dtype=object       unique=3          missing= 65.70% sample=['F', 'F', 'C']
+  gameDate                            dtype=object       unique=34,982     missing=  0.21% sample=['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'gameType', 'gameLabel', 'gameSubLabel', 'seriesGameNumber', 'playerteamId', 'opponentteamId', 'gameDate']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameId: 1,596,451 duplicated values
+  gameDateTimeEst: 1,634,939 duplicated values
+  gameType: 1,669,911 duplicated values
+  gameLabel: 1,669,886 duplicated values
+  gameSubLabel: 1,669,897 duplicated values
+  seriesGameNumber: 1,669,905 duplicated values
+  playerteamId: 1,669,878 duplicated values
+  opponentteamId: 1,669,878 duplicated values
+  gameDate: 1,634,939 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 73,471
+  Rows / unique game: 22.73
+  Min rows per game: 10
+  Max rows per game: 43
+  Median rows per game: 24.0
+  Most common rows/game:
+{24: 19779, 26: 8476, 19: 6743, 20: 6674, 25: 5171, 21: 5034, 18: 4864, 23: 4199, 22: 4021, 17: 2529}
+
+TEAM-RELATED COLUMNS:
+['playerteamCity', 'playerteamName', 'opponentteamCity', 'opponentteamName', 'playerteamId', 'opponentteamId']
+
+PLAYER-RELATED COLUMNS:
+['playerteamCity', 'playerteamName', 'playerteamId']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00']
+  gameDate: ['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00']
+
+NUMERIC COLUMNS:
+['personId', 'gameId', 'win', 'home', 'points', 'assists', 'blocks', 'steals', 'fieldGoalsAttempted', 'fieldGoalsMade', 'fieldGoalsPercentage', 'threePointersAttempted', 'threePointersMade', 'threePointersPercentage', 'freeThrowsAttempted', 'freeThrowsMade', 'freeThrowsPercentage', 'reboundsDefensive', 'reboundsOffensive', 'reboundsTotal', 'foulsPersonal', 'turnovers', 'plusMinusPoints', 'playerteamId', 'opponentteamId']
+
+====================================================================================================
+FILE: PlayerStatisticsExtended.csv
+====================================================================================================
+Rows:       838,803
+Columns:    110
+Memory:     1171.93 MB
+
+COLUMNS:
+  firstName                           dtype=object       unique=1,749      missing=  0.02% sample=['Mitchell', 'Carter', 'Jalen']
+  lastName                            dtype=object       unique=2,452      missing=  0.02% sample=['Robinson', 'Bryant', 'Brunson']
+  personId                            dtype=int64        unique=4,058      missing=  0.00% sample=['1629011', '1642868', '1628973']
+  gameId                              dtype=int64        unique=40,024     missing=  0.00% sample=['42500405', '42500405', '42500405']
+  gameDateTimeEst                     dtype=object       unique=26,425     missing=  0.36% sample=['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00']
+  gameType                            dtype=object       unique=8          missing=  0.00% sample=['Playoffs', 'Playoffs', 'Playoffs']
+  gameLabel                           dtype=object       unique=33         missing= 92.55% sample=['NBA Finals', 'NBA Finals', 'NBA Finals']
+  gameSubLabel                        dtype=object       unique=24         missing= 93.65% sample=['Game 5', 'Game 5', 'Game 5']
+  seriesGameNumber                    dtype=object       unique=16         missing= 90.63% sample=['5', '5', '5']
+  win                                 dtype=float64      unique=2          missing=  0.36% sample=['1.0', '0.0', '1.0']
+  home                                dtype=float64      unique=2          missing=  0.36% sample=['0.0', '1.0', '0.0']
+  playerteamId                        dtype=float64      unique=43         missing= 10.82% sample=['1610612752.0', '1610612759.0', '1610612752.0']
+  playerteamCity                      dtype=object       unique=69         missing=  0.02% sample=['New York', 'San Antonio', 'New York']
+  playerteamName                      dtype=object       unique=54         missing=  0.36% sample=['Knicks', 'Spurs', 'Knicks']
+  opponentteamId                      dtype=float64      unique=43         missing= 10.82% sample=['1610612759.0', '1610612752.0', '1610612759.0']
+  opponentteamCity                    dtype=object       unique=41         missing=  0.38% sample=['San Antonio', 'New York', 'San Antonio']
+  opponentteamName                    dtype=object       unique=54         missing=  0.36% sample=['Spurs', 'Knicks', 'Spurs']
+  comment                             dtype=object       unique=2          missing=100.00% sample=["DNP - Coach's Decision", "DNP - Coach's Decision", "DNP - Coach's Decision"]
+  startingPosition                    dtype=object       unique=3          missing= 31.71% sample=['G', 'C', 'C']
+  numMinutes                          dtype=object       unique=5,094      missing=  0.15% sample=['19.983333333333334', '5.933333333333334', '41.11666666666667']
+  points                              dtype=float64      unique=70         missing=  0.11% sample=['2.0', '0.0', '45.0']
+  assists                             dtype=float64      unique=26         missing=  0.11% sample=['2.0', '0.0', '3.0']
+  reboundsTotal                       dtype=float64      unique=33         missing=  0.11% sample=['10.0', '2.0', '3.0']
+  reboundsOffensive                   dtype=float64      unique=19         missing=  0.11% sample=['6.0', '0.0', '1.0']
+  reboundsDefensive                   dtype=float64      unique=25         missing=  0.11% sample=['4.0', '2.0', '2.0']
+  fieldGoalsMade                      dtype=float64      unique=28         missing=  0.11% sample=['1.0', '0.0', '14.0']
+  fieldGoalsAttempted                 dtype=float64      unique=49         missing=  0.11% sample=['2.0', '0.0', '27.0']
+  fieldGoalsPercentage                dtype=float64      unique=372        missing=  0.11% sample=['0.5', '0.0', '0.519']
+  threePointersMade                   dtype=float64      unique=16         missing=  0.11% sample=['0.0', '0.0', '4.0']
+  threePointersAttempted              dtype=float64      unique=26         missing=  0.11% sample=['0.0', '0.0', '7.0']
+  threePointersPercentage             dtype=float64      unique=128        missing=  0.11% sample=['0.0', '0.0', '0.571']
+  freeThrowsMade                      dtype=float64      unique=28         missing=  0.11% sample=['0.0', '0.0', '13.0']
+  freeThrowsAttempted                 dtype=float64      unique=36         missing=  0.11% sample=['2.0', '0.0', '15.0']
+  freeThrowsPercentage                dtype=float64      unique=200        missing=  0.11% sample=['0.0', '0.0', '0.867']
+  steals                              dtype=float64      unique=12         missing=  0.11% sample=['0.0', '0.0', '2.0']
+  blocks                              dtype=float64      unique=14         missing=  0.11% sample=['0.0', '0.0', '0.0']
+  blocksAgainst                       dtype=float64      unique=10         missing=  0.01% sample=['0.0', '0.0', '0.0']
+  turnovers                           dtype=float64      unique=14         missing=  0.11% sample=['0.0', '1.0', '3.0']
+  foulsPersonal                       dtype=float64      unique=9          missing=  0.11% sample=['1.0', '0.0', '1.0']
+  foulsAgainst                        dtype=float64      unique=25         missing=  0.01% sample=['2.0', '0.0', '9.0']
+  plusMinusPoints                     dtype=float64      unique=116        missing=  0.22% sample=['5.0', '2.0', '10.0']
+  doubleDouble                        dtype=float64      unique=2          missing=  0.01% sample=['0.0', '0.0', '0.0']
+  tripleDouble                        dtype=float64      unique=2          missing=  0.01% sample=['0.0', '0.0', '0.0']
+  estimatedOffensiveRating            dtype=float64      unique=1,875      missing=  0.00% sample=['102.0', '77.6', '94.9']
+  offensiveRating                     dtype=float64      unique=1,370      missing=  0.00% sample=['107.7', '83.3', '107.7']
+  spWorkOffensiveRating               dtype=float64      unique=1,370      missing=  0.00% sample=['107.7', '83.3', '107.7']
+  estimatedDefensiveRating            dtype=float64      unique=1,949      missing=  0.00% sample=['93.8', '72.7', '94.0']
+  defensiveRating                     dtype=float64      unique=1,384      missing=  0.00% sample=['94.9', '72.7', '96.1']
+  spWorkDefensiveRating               dtype=float64      unique=1,384      missing=  0.00% sample=['94.9', '72.7', '96.1']
+  estimatedNetRating                  dtype=float64      unique=3,492      missing=  0.00% sample=['8.2', '4.9', '0.8']
+  netRating                           dtype=float64      unique=2,713      missing=  0.00% sample=['12.8', '10.6', '11.6']
+  spWorkNetRating                     dtype=float64      unique=2,713      missing=  0.00% sample=['12.8', '10.6', '11.6']
+  assistPercentage                    dtype=float64      unique=390        missing=  0.00% sample=['0.143', '0.0', '0.214']
+  assistToTurnoverRatio               dtype=float64      unique=149        missing=  0.00% sample=['0.0', '0.0', '1.0']
+  assistRatio                         dtype=float64      unique=458        missing=  0.00% sample=['40.0', '0.0', '7.7']
+  offensiveReboundPercentage          dtype=float64      unique=303        missing=  0.00% sample=['0.231', '0.0', '0.019']
+  defensiveReboundPercentage          dtype=float64      unique=447        missing=  0.00% sample=['0.182', '0.4', '0.044']
+  reboundPercentage                   dtype=float64      unique=396        missing=  0.00% sample=['0.208', '0.143', '0.031']
+  teamTurnoverPercentage              dtype=float64      unique=275        missing=  0.00% sample=['0.0', '100.0', '7.7']
+  estimatedTurnoverPercentage         dtype=float64      unique=521        missing=  0.00% sample=['0.0', '100.0', '7.6']
+  effectiveFieldGoalPercentage        dtype=float64      unique=576        missing=  0.00% sample=['0.5', '0.0', '0.593']
+  trueShootingPercentage              dtype=float64      unique=1,159      missing=  0.00% sample=['0.347', '0.0', '0.67']
+  usagePercentage                     dtype=float64      unique=544        missing=  0.00% sample=['0.059', '0.059', '0.36']
+  estimatedUsagePercentage            dtype=float64      unique=662        missing=  0.00% sample=['0.06', '0.059', '0.368']
+  estimatedPace                       dtype=float64      unique=9,375      missing=  0.00% sample=['96.82', '96.59', '97.63']
+  pace                                dtype=float64      unique=8,000      missing=  0.00% sample=['93.7', '93.03', '90.46']
+  pacePer40                           dtype=float64      unique=7,058      missing=  0.00% sample=['78.08', '77.53', '75.38']
+  spWorkPace                          dtype=float64      unique=8,000      missing=  0.00% sample=['93.7', '93.03', '90.46']
+  playerImpactEstimate                dtype=float64      unique=1,340      missing=  0.00% sample=['0.124', '0.111', '0.309']
+  possessions                         dtype=int64        unique=122        missing=  0.00% sample=['39', '12', '78']
+  pointsOffTurnovers                  dtype=int64        unique=23         missing=  0.00% sample=['0', '0', '8']
+  pointsSecondChance                  dtype=int64        unique=22         missing=  0.00% sample=['2', '0', '11']
+  pointsFastBreak                     dtype=int64        unique=26         missing=  0.00% sample=['0', '0', '6']
+  pointsInPaint                       dtype=int64        unique=23         missing=  0.00% sample=['2', '0', '14']
+  opponentPointsOffTurnovers          dtype=float64      unique=43         missing=  0.00% sample=['11.0', '3.0', '18.0']
+  opponentPointsSecondChance          dtype=float64      unique=38         missing=  0.00% sample=['7.0', '0.0', '13.0']
+  opponentPointsFastBreak             dtype=float64      unique=57         missing=  0.00% sample=['5.0', '0.0', '10.0']
+  opponentPointsInPaint               dtype=float64      unique=46         missing=  0.00% sample=['16.0', '0.0', '34.0']
+  percentFieldGoalAttempts2Point      dtype=float64      unique=363        missing=  0.00% sample=['1.0', '0.0', '0.741']
+  percentFieldGoalAttempts3Point      dtype=float64      unique=363        missing=  0.00% sample=['0.0', '0.0', '0.259']
+  percentPoints2Point                 dtype=float64      unique=423        missing=  0.00% sample=['1.0', '0.0', '0.444']
+  percentPoints2PointMidRange         dtype=float64      unique=349        missing=  0.00% sample=['0.0', '0.0', '0.133']
+  percentPoints3Point                 dtype=float64      unique=295        missing=  0.00% sample=['0.0', '0.0', '0.267']
+  percentPointsFastBreak              dtype=float64      unique=437        missing=  0.00% sample=['0.0', '0.0', '0.133']
+  percentPointsFreeThrow              dtype=float64      unique=524        missing=  0.00% sample=['0.0', '1.0', '0.289']
+  percentPointsOffTurnovers           dtype=float64      unique=426        missing=  0.00% sample=['0.0', '0.0', '0.178']
+  percentPointsInPaint                dtype=float64      unique=421        missing=  0.00% sample=['1.0', '0.0', '0.311']
+  percentAssisted2PointMade           dtype=float64      unique=127        missing=  0.00% sample=['0.0', '0.0', '0.2']
+  percentUnassisted2PointMade         dtype=float64      unique=127        missing=  0.00% sample=['1.0', '0.0', '0.8']
+  percentAssisted3PointMade           dtype=float64      unique=43         missing=  0.00% sample=['0.0', '0.0', '0.25']
+  percentUnassisted3PointMade         dtype=float64      unique=43         missing=  0.00% sample=['0.0', '0.0', '0.75']
+  percentAssistedFieldGoalsMade       dtype=float64      unique=151        missing=  0.00% sample=['0.0', '0.0', '0.214']
+  percentUnassistedFieldGoalsMade     dtype=float64      unique=151        missing=  0.00% sample=['1.0', '0.0', '0.786']
+  percentTeamFieldGoalsMade           dtype=float64      unique=423        missing=  0.00% sample=['0.067', '0.0', '0.5']
+  percentTeamFieldGoalsAttempted      dtype=float64      unique=545        missing=  0.00% sample=['0.053', '0.0', '0.342']
+  percentTeamThreePointersMade        dtype=float64      unique=141        missing=  0.00% sample=['0.0', '0.0', '0.4']
+  percentTeamThreePointersAttempted   dtype=float64      unique=428        missing=  0.00% sample=['0.0', '0.0', '0.212']
+  percentTeamFreeThrowsMade           dtype=float64      unique=390        missing=  0.00% sample=['0.0', '0.0', '0.722']
+  percentTeamFreeThrowsAttempted      dtype=float64      unique=514        missing=  0.00% sample=['0.143', '0.0', '0.625']
+  percentTeamOffensiveRebounds        dtype=float64      unique=180        missing=  0.00% sample=['0.857', '0.0', '0.091']
+  percentTeamDefensiveRebounds        dtype=float64      unique=412        missing=  0.00% sample=['0.235', '0.667', '0.067']
+  percentTeamRebounds                 dtype=float64      unique=549        missing=  0.00% sample=['0.417', '0.286', '0.073']
+  percentTeamAssists                  dtype=float64      unique=340        missing=  0.00% sample=['0.5', '0.0', '0.25']
+  percentTeamTurnovers                dtype=float64      unique=164        missing=  0.00% sample=['0.0', '0.25', '0.3']
+  percentTeamSteals                   dtype=float64      unique=91         missing=  0.00% sample=['0.0', '0.0', '0.286']
+  percentTeamBlocks                   dtype=float64      unique=81         missing=  0.00% sample=['0.0', '0.0', '0.0']
+  percentTeamBlocksAgainst            dtype=float64      unique=65         missing=  0.00% sample=['0.0', '0.0', '0.0']
+  percentTeamFoulsPersonal            dtype=float64      unique=133        missing=  0.00% sample=['0.2', '0.0', '0.059']
+  percentTeamFoulsDrawn               dtype=float64      unique=290        missing=  0.00% sample=['0.154', '0.0', '0.45']
+  percentTeamPoints                   dtype=float64      unique=655        missing=  0.00% sample=['0.048', '0.0', '0.536']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'gameType', 'gameLabel', 'gameSubLabel', 'seriesGameNumber', 'playerteamId', 'opponentteamId']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameId: 798,779 duplicated values
+  gameDateTimeEst: 812,377 duplicated values
+  gameType: 838,795 duplicated values
+  gameLabel: 838,769 duplicated values
+  gameSubLabel: 838,778 duplicated values
+  seriesGameNumber: 838,786 duplicated values
+  playerteamId: 838,759 duplicated values
+  opponentteamId: 838,759 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 40,024
+  Rows / unique game: 20.96
+  Min rows per game: 9
+  Max rows per game: 36
+  Median rows per game: 20.0
+  Most common rows/game:
+{20: 7643, 19: 6987, 21: 5910, 22: 4247, 18: 4004, 23: 3392, 24: 2710, 25: 1443, 17: 1223, 26: 951}
+
+TEAM-RELATED COLUMNS:
+['playerteamId', 'playerteamCity', 'playerteamName', 'opponentteamId', 'opponentteamCity', 'opponentteamName', 'teamTurnoverPercentage', 'percentTeamFieldGoalsMade', 'percentTeamFieldGoalsAttempted', 'percentTeamThreePointersMade', 'percentTeamThreePointersAttempted', 'percentTeamFreeThrowsMade', 'percentTeamFreeThrowsAttempted', 'percentTeamOffensiveRebounds', 'percentTeamDefensiveRebounds', 'percentTeamRebounds', 'percentTeamAssists', 'percentTeamTurnovers', 'percentTeamSteals', 'percentTeamBlocks', 'percentTeamBlocksAgainst', 'percentTeamFoulsPersonal', 'percentTeamFoulsDrawn', 'percentTeamPoints']
+
+PLAYER-RELATED COLUMNS:
+['playerteamId', 'playerteamCity', 'playerteamName', 'playerImpactEstimate']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-13 20:30:00']
+
+NUMERIC COLUMNS:
+['personId', 'gameId', 'win', 'home', 'playerteamId', 'opponentteamId', 'points', 'assists', 'reboundsTotal', 'reboundsOffensive', 'reboundsDefensive', 'fieldGoalsMade', 'fieldGoalsAttempted', 'fieldGoalsPercentage', 'threePointersMade', 'threePointersAttempted', 'threePointersPercentage', 'freeThrowsMade', 'freeThrowsAttempted', 'freeThrowsPercentage', 'steals', 'blocks', 'blocksAgainst', 'turnovers', 'foulsPersonal', 'foulsAgainst', 'plusMinusPoints', 'doubleDouble', 'tripleDouble', 'estimatedOffensiveRating', 'offensiveRating', 'spWorkOffensiveRating', 'estimatedDefensiveRating', 'defensiveRating', 'spWorkDefensiveRating', 'estimatedNetRating', 'netRating', 'spWorkNetRating', 'assistPercentage', 'assistToTurnoverRatio', 'assistRatio', 'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage', 'teamTurnoverPercentage', 'estimatedTurnoverPercentage', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'usagePercentage', 'estimatedUsagePercentage', 'estimatedPace', 'pace', 'pacePer40', 'spWorkPace', 'playerImpactEstimate', 'possessions', 'pointsOffTurnovers', 'pointsSecondChance', 'pointsFastBreak', 'pointsInPaint', 'opponentPointsOffTurnovers', 'opponentPointsSecondChance', 'opponentPointsFastBreak', 'opponentPointsInPaint', 'percentFieldGoalAttempts2Point', 'percentFieldGoalAttempts3Point', 'percentPoints2Point', 'percentPoints2PointMidRange', 'percentPoints3Point', 'percentPointsFastBreak', 'percentPointsFreeThrow', 'percentPointsOffTurnovers', 'percentPointsInPaint', 'percentAssisted2PointMade', 'percentUnassisted2PointMade', 'percentAssisted3PointMade', 'percentUnassisted3PointMade', 'percentAssistedFieldGoalsMade', 'percentUnassistedFieldGoalsMade', 'percentTeamFieldGoalsMade', 'percentTeamFieldGoalsAttempted', 'percentTeamThreePointersMade', 'percentTeamThreePointersAttempted', 'percentTeamFreeThrowsMade', 'percentTeamFreeThrowsAttempted', 'percentTeamOffensiveRebounds', 'percentTeamDefensiveRebounds', 'percentTeamRebounds', 'percentTeamAssists', 'percentTeamTurnovers', 'percentTeamSteals', 'percentTeamBlocks', 'percentTeamBlocksAgainst', 'percentTeamFoulsPersonal', 'percentTeamFoulsDrawn', 'percentTeamPoints']
+
+====================================================================================================
+FILE: Players.csv
+====================================================================================================
+Rows:       6,692
+Columns:    20
+Memory:     2.69 MB
+
+COLUMNS:
+  personId                            dtype=int64        unique=6,692      missing=  0.00% sample=['196294534', '76001', '76002']
+  firstName                           dtype=object       unique=2,227      missing=  0.01% sample=['Alberto', 'Alaa', 'Zaid']
+  lastName                            dtype=object       unique=3,825      missing=  0.03% sample=['Abalde', 'Abdelnaby', 'Abdul-Aziz']
+  birthDate                           dtype=object       unique=4,841      missing= 17.02% sample=['1968-06-24', '1946-04-07', '1947-04-16']
+  school                              dtype=object       unique=732        missing= 21.14% sample=['Duke', 'Iowa State', 'UCLA']
+  country                             dtype=object       unique=87         missing= 20.91% sample=['USA', 'USA', 'USA']
+  heightInches                        dtype=float64      unique=28         missing= 23.68% sample=['82.0', '81.0', '86.0']
+  bodyWeightLbs                       dtype=float64      unique=148        missing= 23.83% sample=['240.0', '235.0', '225.0']
+  jersey                              dtype=object       unique=113        missing= 42.86% sample=['30', '54', '33']
+  guard                               dtype=int64        unique=2          missing=  0.00% sample=['0', '0', '0']
+  forward                             dtype=int64        unique=2          missing=  0.00% sample=['0', '1', '0']
+  center                              dtype=int64        unique=2          missing=  0.00% sample=['0', '0', '1']
+  dleagueFlag                         dtype=float64      unique=2          missing= 18.40% sample=['0.0', '0.0', '0.0']
+  nbaFlag                             dtype=float64      unique=2          missing= 18.40% sample=['1.0', '1.0', '1.0']
+  gamesPlayedFlag                     dtype=float64      unique=2          missing= 18.40% sample=['1.0', '1.0', '1.0']
+  draftYear                           dtype=float64      unique=81         missing= 16.98% sample=['1990.0', '1968.0', '1969.0']
+  draftRound                          dtype=float64      unique=21         missing= 19.40% sample=['1.0', '1.0', '1.0']
+  draftNumber                         dtype=float64      unique=169        missing= 20.28% sample=['25.0', '5.0', '1.0']
+  fromYear                            dtype=float64      unique=80         missing= 19.98% sample=['1990.0', '1968.0', '1969.0']
+  toYear                              dtype=float64      unique=80         missing= 28.72% sample=['1994.0', '1977.0', '1988.0']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['birthDate', 'gamesPlayedFlag']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  birthDate: 1,850 duplicated values
+  gamesPlayedFlag: 6,689 duplicated values
+
+DATE/TIME COLUMNS:
+  birthDate: ['1968-06-24', '1946-04-07', '1947-04-16', '1969-03-09', '1974-11-03']
+
+NUMERIC COLUMNS:
+['personId', 'heightInches', 'bodyWeightLbs', 'guard', 'forward', 'center', 'dleagueFlag', 'nbaFlag', 'gamesPlayedFlag', 'draftYear', 'draftRound', 'draftNumber', 'fromYear', 'toYear']
+
+====================================================================================================
+FILE: TeamHistories.csv
+====================================================================================================
+Rows:       140
+Columns:    7
+Memory:     0.03 MB
+
+COLUMNS:
+  teamId                              dtype=int64        unique=97         missing=  0.00% sample=['1610612737', '1610612737', '1610612737']
+  teamCity                            dtype=object       unique=89         missing=  0.00% sample=['Tri-Cities', 'Milwaukee', 'St. Louis']
+  teamName                            dtype=object       unique=99         missing=  0.00% sample=['Blackhawks', 'Hawks', 'Hawks']
+  teamAbbrev                          dtype=object       unique=110        missing=  0.00% sample=['TRI  ', 'MIL  ', 'STL  ']
+  seasonFounded                       dtype=int64        unique=65         missing=  0.00% sample=['1946', '1951', '1955']
+  seasonActiveTill                    dtype=int64        unique=36         missing=  0.00% sample=['1948', '1954', '1967']
+  league                              dtype=object       unique=12         missing=  0.00% sample=['BAA', 'NBA', 'NBA']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['teamId', 'seasonFounded', 'seasonActiveTill']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  teamId: 43 duplicated values
+  seasonFounded: 75 duplicated values
+  seasonActiveTill: 104 duplicated values
+
+SEASON ANALYSIS:
+  seasonFounded: 65 unique values
+      sample: ['1946', '1951', '1955', '1968', '1970', '2002', '2005', '2007', '2013', '1966', '1980', '1976', '1962', '1971', '1967']
+  seasonActiveTill: 36 unique values
+      sample: ['1948', '1954', '1967', '2100', '2004', '2006', '2012', '1970', '1977', '1983', '1976', '2011', '1962', '1971', '1974']
+
+TEAM-RELATED COLUMNS:
+['teamId', 'teamCity', 'teamName', 'teamAbbrev']
+
+NUMERIC COLUMNS:
+['teamId', 'seasonFounded', 'seasonActiveTill']
+
+====================================================================================================
+FILE: TeamStatistics.csv
+====================================================================================================
+Rows:       146,560
+Columns:    59
+Memory:     124.54 MB
+
+COLUMNS:
+  gameId                              dtype=int64        unique=73,279     missing=  0.00% sample=['42500405', '42500405', '42500404']
+  gameDateTimeEst                     dtype=object       unique=34,924     missing=  0.00% sample=['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-10 20:30:00']
+  teamCity                            dtype=object       unique=51         missing=  0.01% sample=['San Antonio', 'New York', 'New York']
+  teamName                            dtype=object       unique=50         missing=  0.00% sample=['Spurs', 'Knicks', 'Knicks']
+  teamId                              dtype=int64        unique=42         missing=  0.00% sample=['1610612759', '1610612752', '1610612752']
+  opponentTeamCity                    dtype=object       unique=51         missing=  0.01% sample=['New York', 'San Antonio', 'San Antonio']
+  opponentTeamName                    dtype=object       unique=50         missing=  0.00% sample=['Knicks', 'Spurs', 'Spurs']
+  opponentTeamId                      dtype=int64        unique=42         missing=  0.00% sample=['1610612752', '1610612759', '1610612759']
+  home                                dtype=int64        unique=2          missing=  0.00% sample=['1', '0', '1']
+  win                                 dtype=float64      unique=2          missing=  0.00% sample=['0.0', '1.0', '1.0']
+  teamScore                           dtype=int64        unique=145        missing=  0.00% sample=['90', '94', '107']
+  opponentScore                       dtype=int64        unique=145        missing=  0.00% sample=['94', '90', '106']
+  assists                             dtype=float64      unique=53         missing=  0.00% sample=['18.0', '14.0', '23.0']
+  blocks                              dtype=float64      unique=24         missing=  0.00% sample=['7.0', '4.0', '4.0']
+  steals                              dtype=float64      unique=27         missing=  0.00% sample=['6.0', '8.0', '6.0']
+  fieldGoalsAttempted                 dtype=float64      unique=106        missing=  0.00% sample=['86.0', '87.0', '78.0']
+  fieldGoalsMade                      dtype=float64      unique=67         missing=  0.00% sample=['33.0', '31.0', '36.0']
+  fieldGoalsPercentage                dtype=float64      unique=432        missing=  0.00% sample=['0.384', '0.356', '0.462']
+  threePointersAttempted              dtype=float64      unique=69         missing=  0.00% sample=['37.0', '37.0', '32.0']
+  threePointersMade                   dtype=float64      unique=30         missing=  0.00% sample=['12.0', '12.0', '15.0']
+  threePointersPercentage             dtype=float64      unique=446        missing=  0.00% sample=['0.324', '0.324', '0.469']
+  freeThrowsAttempted                 dtype=float64      unique=76         missing=  0.00% sample=['19.0', '28.0', '28.0']
+  freeThrowsMade                      dtype=float64      unique=60         missing=  0.00% sample=['12.0', '20.0', '20.0']
+  freeThrowsPercentage                dtype=float64      unique=496        missing=  0.00% sample=['0.632', '0.714', '0.714']
+  reboundsDefensive                   dtype=float64      unique=54         missing=  0.00% sample=['33.0', '35.0', '31.0']
+  reboundsOffensive                   dtype=float64      unique=39         missing=  0.00% sample=['14.0', '13.0', '8.0']
+  reboundsTotal                       dtype=float64      unique=88         missing=  0.00% sample=['47.0', '48.0', '39.0']
+  foulsPersonal                       dtype=float64      unique=68         missing=  0.00% sample=['22.0', '21.0', '21.0']
+  turnovers                           dtype=float64      unique=41         missing=  0.00% sample=['12.0', '10.0', '13.0']
+  plusMinusPoints                     dtype=float64      unique=133        missing=  0.04% sample=['-4.0', '4.0', '1.0']
+  numMinutes                          dtype=float64      unique=26         missing=  0.00% sample=['240.0', '240.0', '240.0']
+  q1Points                            dtype=float64      unique=55         missing=  5.35% sample=['23.0', '13.0', '22.0']
+  q2Points                            dtype=float64      unique=54         missing=  5.37% sample=['19.0', '24.0', '27.0']
+  q3Points                            dtype=float64      unique=54         missing=  5.39% sample=['30.0', '28.0', '26.0']
+  q4Points                            dtype=float64      unique=56         missing=  5.39% sample=['18.0', '29.0', '32.0']
+  benchPoints                         dtype=float64      unique=143        missing=  4.99% sample=['32.0', '9.0', '12.0']
+  biggestLead                         dtype=float64      unique=66         missing=  4.99% sample=['16.0', '4.0', '1.0']
+  biggestScoringRun                   dtype=float64      unique=29         missing=  4.99% sample=['9.0', '10.0', '13.0']
+  leadChanges                         dtype=float64      unique=44         missing=  4.99% sample=['5.0', '5.0', '3.0']
+  pointsFastBreak                     dtype=float64      unique=53         missing=  4.99% sample=['13.0', '13.0', '13.0']
+  pointsFromTurnovers                 dtype=float64      unique=47         missing=  4.99% sample=['21.0', '18.0', '11.0']
+  pointsInThePaint                    dtype=float64      unique=56         missing=  4.99% sample=['38.0', '30.0', '34.0']
+  pointsSecondChance                  dtype=float64      unique=42         missing=  4.99% sample=['17.0', '14.0', '14.0']
+  timesTied                           dtype=float64      unique=29         missing=  4.99% sample=['5.0', '5.0', '2.0']
+  timeoutsRemaining                   dtype=float64      unique=7          missing=  4.99% sample=['0.0', '0.0', '0.0']
+  seasonWins                          dtype=float64      unique=74         missing=  4.99% sample=['1.0', '4.0', '3.0']
+  seasonLosses                        dtype=float64      unique=74         missing=  4.99% sample=['4.0', '1.0', '1.0']
+  coachId                             dtype=float64      unique=0          missing=100.00% sample=[]
+  gameType                            dtype=object       unique=5          missing=  5.18% sample=['Playoffs', 'Playoffs', 'Playoffs']
+  gameLabel                           dtype=object       unique=31         missing= 93.65% sample=['NBA Finals', 'NBA Finals', 'NBA Finals']
+  gameSubLabel                        dtype=object       unique=20         missing= 93.70% sample=['Game 5', 'Game 5', 'Game 4']
+  seriesGameNumber                    dtype=float64      unique=10         missing= 93.94% sample=['5.0', '5.0', '4.0']
+  seed                                dtype=float64      unique=10         missing= 94.63% sample=['2.0', '3.0', '3.0']
+  reboundsTeam                        dtype=float64      unique=26         missing=  5.18% sample=['12.0', '18.0', '14.0']
+  turnoversTeam                       dtype=float64      unique=8          missing=  5.18% sample=['1.0', '4.0', '2.0']
+  ot1Points                           dtype=float64      unique=27         missing= 94.67% sample=['3.0', '14.0', '7.0']
+  ot2Points                           dtype=float64      unique=23         missing= 99.25% sample=['14.0', '7.0', '7.0']
+  otAllPoints                         dtype=float64      unique=48         missing= 94.66% sample=['3.0', '14.0', '21.0']
+  gameDate                            dtype=object       unique=34,924     missing=  0.00% sample=['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-10 20:30:00']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'teamId', 'opponentTeamId', 'seasonWins', 'seasonLosses', 'gameType', 'gameLabel', 'gameSubLabel', 'seriesGameNumber', 'gameDate']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameId: 73,281 duplicated values
+  gameDateTimeEst: 111,636 duplicated values
+  teamId: 146,518 duplicated values
+  opponentTeamId: 146,518 duplicated values
+  seasonWins: 146,485 duplicated values
+  seasonLosses: 146,485 duplicated values
+  gameType: 146,554 duplicated values
+  gameLabel: 146,528 duplicated values
+  gameSubLabel: 146,539 duplicated values
+  seriesGameNumber: 146,549 duplicated values
+  gameDate: 111,636 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 73,279
+  Rows / unique game: 2.00
+  Min rows per game: 2
+  Max rows per game: 3
+  Median rows per game: 2.0
+  Most common rows/game:
+{2: 73277, 3: 2}
+
+SEASON ANALYSIS:
+  seasonWins: 74 unique values
+      sample: ['1.0', '4.0', '3.0', '2.0', '0.0', '26.0', '31.0', '25.0', '52.0', '49.0', '64.0', '45.0', '62.0', '54.0', '22.0']
+  seasonLosses: 74 unique values
+      sample: ['4.0', '1.0', '3.0', '2.0', '0.0', '56.0', '51.0', '57.0', '30.0', '33.0', '18.0', '37.0', '20.0', '28.0', '60.0']
+
+TEAM-RELATED COLUMNS:
+['teamCity', 'teamName', 'teamId', 'opponentTeamCity', 'opponentTeamName', 'opponentTeamId', 'teamScore', 'reboundsTeam', 'turnoversTeam']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00']
+  timesTied: ['5.0', '5.0', '2.0', '2.0', '4.0']
+  timeoutsRemaining: ['0.0', '0.0', '0.0', '0.0', '0.0']
+  gameDate: ['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00']
+
+NUMERIC COLUMNS:
+['gameId', 'teamId', 'opponentTeamId', 'home', 'win', 'teamScore', 'opponentScore', 'assists', 'blocks', 'steals', 'fieldGoalsAttempted', 'fieldGoalsMade', 'fieldGoalsPercentage', 'threePointersAttempted', 'threePointersMade', 'threePointersPercentage', 'freeThrowsAttempted', 'freeThrowsMade', 'freeThrowsPercentage', 'reboundsDefensive', 'reboundsOffensive', 'reboundsTotal', 'foulsPersonal', 'turnovers', 'plusMinusPoints', 'numMinutes', 'q1Points', 'q2Points', 'q3Points', 'q4Points', 'benchPoints', 'biggestLead', 'biggestScoringRun', 'leadChanges', 'pointsFastBreak', 'pointsFromTurnovers', 'pointsInThePaint', 'pointsSecondChance', 'timesTied', 'timeoutsRemaining', 'seasonWins', 'seasonLosses', 'coachId', 'seriesGameNumber', 'seed', 'reboundsTeam', 'turnoversTeam', 'ot1Points', 'ot2Points', 'otAllPoints']
+
+====================================================================================================
+FILE: TeamStatisticsExtended.csv
+====================================================================================================
+Rows:       79,724
+Columns:    104
+Memory:     90.45 MB
+
+COLUMNS:
+  gameId                              dtype=int64        unique=39,862     missing=  0.00% sample=['42500405', '42500405', '42500404']
+  gameDateTimeEst                     dtype=object       unique=26,396     missing=  0.00% sample=['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-10 20:30:00']
+  gameType                            dtype=object       unique=5          missing=  9.42% sample=['Playoffs', 'Playoffs', 'Playoffs']
+  gameLabel                           dtype=object       unique=29         missing= 93.45% sample=['NBA Finals', 'NBA Finals', 'NBA Finals']
+  gameSubLabel                        dtype=object       unique=20         missing= 93.55% sample=['Game 5', 'Game 5', 'Game 4']
+  seriesGameNumber                    dtype=float64      unique=10         missing= 94.10% sample=['5.0', '5.0', '4.0']
+  teamId                              dtype=int64        unique=41         missing=  0.00% sample=['1610612759', '1610612752', '1610612759']
+  teamCity                            dtype=object       unique=37         missing=  0.02% sample=['San Antonio', 'New York', 'San Antonio']
+  teamName                            dtype=object       unique=44         missing=  0.00% sample=['Spurs', 'Knicks', 'Spurs']
+  opponentTeamId                      dtype=int64        unique=41         missing=  0.00% sample=['1610612752', '1610612759', '1610612752']
+  opponentTeamCity                    dtype=object       unique=37         missing=  0.02% sample=['New York', 'San Antonio', 'New York']
+  opponentTeamName                    dtype=object       unique=44         missing=  0.00% sample=['Knicks', 'Spurs', 'Knicks']
+  home                                dtype=int64        unique=2          missing=  0.00% sample=['1', '0', '0']
+  win                                 dtype=int64        unique=2          missing=  0.00% sample=['0', '1', '0']
+  teamScore                           dtype=int64        unique=128        missing=  0.00% sample=['90', '94', '106']
+  opponentScore                       dtype=int64        unique=128        missing=  0.00% sample=['94', '90', '107']
+  seed                                dtype=float64      unique=10         missing= 93.99% sample=['2.0', '3.0', '2.0']
+  numMinutes                          dtype=float64      unique=19         missing=  0.01% sample=['240.0', '240.0', '240.0']
+  assists                             dtype=int64        unique=47         missing=  0.00% sample=['18', '14', '24']
+  steals                              dtype=int64        unique=25         missing=  0.00% sample=['6', '8', '10']
+  blocks                              dtype=int64        unique=22         missing=  0.00% sample=['7', '4', '4']
+  blocksAgainst                       dtype=int64        unique=23         missing=  0.00% sample=['4', '7', '4']
+  fieldGoalsMade                      dtype=int64        unique=55         missing=  0.00% sample=['33', '31', '36']
+  fieldGoalsAttempted                 dtype=int64        unique=90         missing=  0.00% sample=['86', '87', '86']
+  fieldGoalsPercentage                dtype=float64      unique=400        missing=  0.00% sample=['0.384', '0.356', '0.419']
+  threePointersMade                   dtype=int64        unique=30         missing=  0.00% sample=['12', '12', '17']
+  threePointersAttempted              dtype=int64        unique=69         missing=  0.00% sample=['37', '37', '43']
+  threePointersPercentage             dtype=float64      unique=443        missing=  0.00% sample=['0.324', '0.324', '0.395']
+  freeThrowsMade                      dtype=int64        unique=53         missing=  0.00% sample=['12', '20', '17']
+  freeThrowsAttempted                 dtype=int64        unique=63         missing=  0.00% sample=['19', '28', '20']
+  freeThrowsPercentage                dtype=float64      unique=416        missing=  0.00% sample=['0.632', '0.714', '0.85']
+  reboundsOffensive                   dtype=int64        unique=37         missing=  0.00% sample=['14', '13', '12']
+  reboundsDefensive                   dtype=int64        unique=53         missing=  0.00% sample=['33', '35', '30']
+  reboundsTotal                       dtype=int64        unique=66         missing=  0.00% sample=['47', '48', '42']
+  reboundsTeam                        dtype=float64      unique=26         missing=  9.42% sample=['12.0', '18.0', '8.0']
+  foulsPersonal                       dtype=int64        unique=46         missing=  0.00% sample=['22', '21', '21']
+  personalFoulsDrawn                  dtype=int64        unique=46         missing=  0.00% sample=['21', '22', '21']
+  turnovers                           dtype=int64        unique=36         missing=  0.00% sample=['12', '10', '11']
+  turnoversTeam                       dtype=float64      unique=8          missing=  9.42% sample=['1.0', '4.0', '1.0']
+  plusMinusPoints                     dtype=float64      unique=131        missing=  0.07% sample=['-4.0', '4.0', '-1.0']
+  q1Points                            dtype=float64      unique=50         missing=  9.07% sample=['23.0', '13.0', '41.0']
+  q2Points                            dtype=float64      unique=50         missing=  9.09% sample=['19.0', '24.0', '35.0']
+  q3Points                            dtype=float64      unique=50         missing=  9.09% sample=['30.0', '28.0', '14.0']
+  q4Points                            dtype=float64      unique=49         missing=  9.09% sample=['18.0', '29.0', '16.0']
+  ot1Points                           dtype=float64      unique=27         missing= 94.59% sample=['14.0', '3.0', '7.0']
+  ot2Points                           dtype=float64      unique=22         missing= 99.25% sample=['7.0', '14.0', '10.0']
+  otAllPoints                         dtype=float64      unique=44         missing= 94.59% sample=['14.0', '3.0', '14.0']
+  benchPoints                         dtype=float64      unique=143        missing=  9.07% sample=['32.0', '9.0', '28.0']
+  biggestLead                         dtype=float64      unique=66         missing=  9.07% sample=['16.0', '4.0', '29.0']
+  biggestScoringRun                   dtype=float64      unique=29         missing=  9.07% sample=['9.0', '10.0', '10.0']
+  leadChanges                         dtype=float64      unique=44         missing=  9.07% sample=['5.0', '5.0', '3.0']
+  pointsFastBreak                     dtype=float64      unique=53         missing=  9.07% sample=['13.0', '13.0', '12.0']
+  pointsFromTurnovers                 dtype=float64      unique=47         missing=  9.07% sample=['21.0', '18.0', '25.0']
+  pointsInThePaint                    dtype=float64      unique=56         missing=  9.07% sample=['38.0', '30.0', '28.0']
+  pointsSecondChance                  dtype=float64      unique=42         missing=  9.07% sample=['17.0', '14.0', '10.0']
+  timesTied                           dtype=float64      unique=29         missing=  9.07% sample=['5.0', '5.0', '2.0']
+  timeoutsRemaining                   dtype=float64      unique=7          missing=  9.07% sample=['0.0', '0.0', '0.0']
+  seasonWins                          dtype=float64      unique=74         missing=  9.07% sample=['1.0', '4.0', '1.0']
+  seasonLosses                        dtype=float64      unique=73         missing=  9.07% sample=['4.0', '1.0', '3.0']
+  estimatedOffensiveRating            dtype=float64      unique=832        missing=  0.00% sample=['96.4', '93.7', '111.8']
+  offensiveRating                     dtype=float64      unique=787        missing=  0.00% sample=['100.0', '103.3', '112.8']
+  estimatedDefensiveRating            dtype=float64      unique=832        missing=  0.00% sample=['93.7', '96.4', '109.9']
+  defensiveRating                     dtype=float64      unique=786        missing=  0.00% sample=['103.3', '100.0', '115.1']
+  estimatedNetRating                  dtype=float64      unique=1,055      missing=  0.00% sample=['2.7', '-2.7', '1.9']
+  netRating                           dtype=float64      unique=1,067      missing=  0.00% sample=['-3.3', '3.3', '-2.3']
+  assistPercentage                    dtype=float64      unique=533        missing=  0.00% sample=['0.545', '0.452', '0.667']
+  assistToTurnoverRatio               dtype=float64      unique=363        missing=  0.00% sample=['1.38', '1.0', '2.0']
+  assistRatio                         dtype=float64      unique=246        missing=  0.00% sample=['14.2', '10.9', '17.9']
+  offensiveReboundPercentage          dtype=float64      unique=450        missing=  9.78% sample=['0.339', '0.407', '0.308']
+  defensiveReboundPercentage          dtype=float64      unique=453        missing=  9.78% sample=['0.593', '0.661', '0.717']
+  reboundPercentage                   dtype=float64      unique=343        missing= 18.13% sample=['0.47', '0.53', '0.5']
+  teamTurnoverPercentage              dtype=float64      unique=300        missing=  0.00% sample=['0.144', '0.154', '0.128']
+  effectiveFieldGoalPercentage        dtype=float64      unique=484        missing=  0.00% sample=['0.453', '0.425', '0.517']
+  trueShootingPercentage              dtype=float64      unique=458        missing=  0.00% sample=['0.477', '0.473', '0.559']
+  estimatedPace                       dtype=float64      unique=426        missing=  0.00% sample=['96.8', '96.8', '96.1']
+  pace                                dtype=float64      unique=328        missing=  0.00% sample=['90.5', '90.5', '93.5']
+  pacePer40                           dtype=float64      unique=325        missing=  0.00% sample=['75.42', '75.42', '77.92']
+  possessions                         dtype=int64        unique=84         missing=  0.00% sample=['90', '91', '94']
+  playerImpactEstimate                dtype=float64      unique=783        missing=  0.00% sample=['0.508', '0.492', '0.514']
+  pointsOffTurnovers                  dtype=float64      unique=58         missing=  0.00% sample=['21.0', '18.0', '25.0']
+  opponentPointsOffTurnovers          dtype=float64      unique=48         missing=  0.00% sample=['18.0', '21.0', '11.0']
+  opponentPointsSecondChance          dtype=float64      unique=42         missing=  0.00% sample=['14.0', '17.0', '14.0']
+  opponentPointsFastBreak             dtype=float64      unique=53         missing=  0.00% sample=['13.0', '13.0', '13.0']
+  opponentPointsInPaint               dtype=float64      unique=47         missing=  0.00% sample=['30.0', '38.0', '34.0']
+  percentFieldGoalAttempts2Point      dtype=float64      unique=617        missing=  0.00% sample=['0.57', '0.575', '0.5']
+  percentFieldGoalAttempts3Point      dtype=float64      unique=618        missing=  0.00% sample=['0.43', '0.425', '0.5']
+  percentPoints2Point                 dtype=float64      unique=629        missing=  0.00% sample=['0.467', '0.404', '0.358']
+  percentPoints2PointMidRange         dtype=float64      unique=506        missing=  0.00% sample=['0.044', '0.085', '0.094']
+  percentPoints3Point                 dtype=float64      unique=568        missing=  0.00% sample=['0.4', '0.383', '0.481']
+  percentPointsFastBreak              dtype=float64      unique=397        missing=  0.00% sample=['0.144', '0.138', '0.113']
+  percentPointsFreeThrow              dtype=float64      unique=422        missing=  0.00% sample=['0.133', '0.213', '0.16']
+  percentPointsOffTurnovers           dtype=float64      unique=400        missing=  0.00% sample=['0.233', '0.191', '0.236']
+  percentPointsInPaint                dtype=float64      unique=566        missing=  0.00% sample=['0.422', '0.319', '0.264']
+  percentAssisted2PointMade           dtype=float64      unique=495        missing=  0.00% sample=['0.381', '0.263', '0.421']
+  percentUnassisted2PointMade         dtype=float64      unique=495        missing=  0.00% sample=['0.619', '0.737', '0.579']
+  percentAssisted3PointMade           dtype=float64      unique=141        missing=  0.00% sample=['0.833', '0.75', '0.941']
+  percentUnassisted3PointMade         dtype=float64      unique=141        missing=  0.00% sample=['0.167', '0.25', '0.059']
+  percentAssistedFieldGoalsMade       dtype=float64      unique=529        missing=  0.00% sample=['0.545', '0.452', '0.667']
+  percentUnassistedFieldGoalsMade     dtype=float64      unique=529        missing=  0.00% sample=['0.455', '0.548', '0.333']
+  freeThrowAttemptRate                dtype=float64      unique=718        missing=  0.00% sample=['0.221', '0.322', '0.233']
+  opponentEffectiveFieldGoalPercentage dtype=float64      unique=483        missing=  0.00% sample=['0.425', '0.453', '0.558']
+  opponentFreeThrowAttemptRate        dtype=float64      unique=718        missing=  0.00% sample=['0.322', '0.221', '0.359']
+  opponentTurnoverPercentage          dtype=float64      unique=300        missing=  0.00% sample=['0.154', '0.144', '0.161']
+  opponentOffensiveReboundPercentage  dtype=float64      unique=454        missing=  9.78% sample=['0.407', '0.339', '0.283']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['gameId', 'gameDateTimeEst', 'gameType', 'gameLabel', 'gameSubLabel', 'seriesGameNumber', 'teamId', 'opponentTeamId', 'seasonWins', 'seasonLosses']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  gameId: 39,862 duplicated values
+  gameDateTimeEst: 53,328 duplicated values
+  gameType: 79,718 duplicated values
+  gameLabel: 79,694 duplicated values
+  gameSubLabel: 79,703 duplicated values
+  seriesGameNumber: 79,713 duplicated values
+  teamId: 79,683 duplicated values
+  opponentTeamId: 79,683 duplicated values
+  seasonWins: 79,649 duplicated values
+  seasonLosses: 79,650 duplicated values
+
+GAME ID ANALYSIS:
+  Column: gameId
+  Unique games: 39,862
+  Rows / unique game: 2.00
+  Min rows per game: 2
+  Max rows per game: 2
+  Median rows per game: 2.0
+  Most common rows/game:
+{2: 39862}
+
+SEASON ANALYSIS:
+  seasonWins: 74 unique values
+      sample: ['1.0', '4.0', '3.0', '2.0', '0.0', '31.0', '26.0', '25.0', '52.0', '49.0', '64.0', '45.0', '54.0', '62.0', '22.0']
+  seasonLosses: 73 unique values
+      sample: ['4.0', '1.0', '3.0', '2.0', '0.0', '51.0', '56.0', '57.0', '30.0', '33.0', '18.0', '37.0', '28.0', '20.0', '60.0']
+
+TEAM-RELATED COLUMNS:
+['teamId', 'teamCity', 'teamName', 'opponentTeamId', 'opponentTeamCity', 'opponentTeamName', 'teamScore', 'reboundsTeam', 'turnoversTeam', 'teamTurnoverPercentage']
+
+PLAYER-RELATED COLUMNS:
+['playerImpactEstimate']
+
+DATE/TIME COLUMNS:
+  gameDateTimeEst: ['2026-06-13 20:30:00', '2026-06-13 20:30:00', '2026-06-10 20:30:00', '2026-06-10 20:30:00', '2026-06-08 20:30:00']
+  timesTied: ['5.0', '5.0', '2.0', '2.0', '4.0']
+  timeoutsRemaining: ['0.0', '0.0', '0.0', '0.0', '0.0']
+
+NUMERIC COLUMNS:
+['gameId', 'seriesGameNumber', 'teamId', 'opponentTeamId', 'home', 'win', 'teamScore', 'opponentScore', 'seed', 'numMinutes', 'assists', 'steals', 'blocks', 'blocksAgainst', 'fieldGoalsMade', 'fieldGoalsAttempted', 'fieldGoalsPercentage', 'threePointersMade', 'threePointersAttempted', 'threePointersPercentage', 'freeThrowsMade', 'freeThrowsAttempted', 'freeThrowsPercentage', 'reboundsOffensive', 'reboundsDefensive', 'reboundsTotal', 'reboundsTeam', 'foulsPersonal', 'personalFoulsDrawn', 'turnovers', 'turnoversTeam', 'plusMinusPoints', 'q1Points', 'q2Points', 'q3Points', 'q4Points', 'ot1Points', 'ot2Points', 'otAllPoints', 'benchPoints', 'biggestLead', 'biggestScoringRun', 'leadChanges', 'pointsFastBreak', 'pointsFromTurnovers', 'pointsInThePaint', 'pointsSecondChance', 'timesTied', 'timeoutsRemaining', 'seasonWins', 'seasonLosses', 'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating', 'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnoverRatio', 'assistRatio', 'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage', 'teamTurnoverPercentage', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'estimatedPace', 'pace', 'pacePer40', 'possessions', 'playerImpactEstimate', 'pointsOffTurnovers', 'opponentPointsOffTurnovers', 'opponentPointsSecondChance', 'opponentPointsFastBreak', 'opponentPointsInPaint', 'percentFieldGoalAttempts2Point', 'percentFieldGoalAttempts3Point', 'percentPoints2Point', 'percentPoints2PointMidRange', 'percentPoints3Point', 'percentPointsFastBreak', 'percentPointsFreeThrow', 'percentPointsOffTurnovers', 'percentPointsInPaint', 'percentAssisted2PointMade', 'percentUnassisted2PointMade', 'percentAssisted3PointMade', 'percentUnassisted3PointMade', 'percentAssistedFieldGoalsMade', 'percentUnassistedFieldGoalsMade', 'freeThrowAttemptRate', 'opponentEffectiveFieldGoalPercentage', 'opponentFreeThrowAttemptRate', 'opponentTurnoverPercentage', 'opponentOffensiveReboundPercentage']
+
+====================================================================================================
+FILE: nba_dailyleaders_full_24_25.csv
+====================================================================================================
+Rows:       28,265
+Columns:    27
+Memory:     14.31 MB
+
+COLUMNS:
+  Player                              dtype=object       unique=569        missing=  0.00% sample=['Jayson Tatum', 'Anthony Davis', 'Derrick White']
+  Tm                                  dtype=object       unique=30         missing=  0.00% sample=['BOS', 'LAL', 'BOS']
+  Unnamed: 3                          dtype=object       unique=1          missing= 50.27% sample=['@', '@', '@']
+  Opp                                 dtype=object       unique=30         missing=  0.00% sample=['NYK', 'MIN', 'NYK']
+  Result                              dtype=object       unique=2          missing=  0.00% sample=['W', 'W', 'W']
+  MP                                  dtype=object       unique=2,700      missing=  0.00% sample=['30:18', '37:35', '26:38']
+  FG                                  dtype=int64        unique=23         missing=  0.00% sample=['14', '11', '8']
+  FGA                                 dtype=int64        unique=40         missing=  0.00% sample=['18', '23', '13']
+  FG%                                 dtype=float64      unique=200        missing=  5.81% sample=['0.778', '0.478', '0.615']
+  3P                                  dtype=int64        unique=12         missing=  0.00% sample=['8', '1', '6']
+  3PA                                 dtype=int64        unique=21         missing=  0.00% sample=['11', '3', '10']
+  3P%                                 dtype=float64      unique=74         missing= 20.58% sample=['0.727', '0.333', '0.6']
+  FT                                  dtype=int64        unique=22         missing=  0.00% sample=['1', '13', '2']
+  FTA                                 dtype=int64        unique=25         missing=  0.00% sample=['2', '15', '2']
+  FT%                                 dtype=float64      unique=73         missing= 45.64% sample=['0.5', '0.867', '1.0']
+  ORB                                 dtype=int64        unique=14         missing=  0.00% sample=['0', '3', '0']
+  DRB                                 dtype=int64        unique=22         missing=  0.00% sample=['4', '13', '3']
+  TRB                                 dtype=int64        unique=27         missing=  0.00% sample=['4', '16', '3']
+  AST                                 dtype=int64        unique=23         missing=  0.00% sample=['10', '4', '4']
+  STL                                 dtype=int64        unique=9          missing=  0.00% sample=['1', '1', '1']
+  BLK                                 dtype=int64        unique=11         missing=  0.00% sample=['1', '3', '0']
+  TOV                                 dtype=int64        unique=12         missing=  0.00% sample=['1', '1', '0']
+  PF                                  dtype=int64        unique=7          missing=  0.00% sample=['1', '1', '1']
+  PTS                                 dtype=int64        unique=60         missing=  0.00% sample=['37', '36', '24']
+  +/-                                 dtype=float64      unique=98         missing=  0.06% sample=['26.0', '1.0', '21.0']
+  GmSc                                dtype=float64      unique=489        missing=  0.00% sample=['38.1', '34.0', '22.4']
+  Date                                dtype=object       unique=214        missing=  0.00% sample=['2024-10-22', '2024-10-22', '2024-10-22']
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['Date']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  Date: 28,051 duplicated values
+
+PLAYER-RELATED COLUMNS:
+['Player']
+
+DATE/TIME COLUMNS:
+  Date: ['2024-10-22', '2024-10-22', '2024-10-22', '2024-10-22', '2024-10-22']
+
+NUMERIC COLUMNS:
+['FG', 'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', '+/-', 'GmSc']
+
+====================================================================================================
+FILE: nba_dailyleaders_full_2526.csv
+====================================================================================================
+Rows:       28,716
+Columns:    29
+Memory:     14.08 MB
+
+COLUMNS:
+  Player                              dtype=object       unique=582        missing=  0.00% sample=['Luka Dončić', 'Alperen Şengün', 'Jimmy Butler']
+  Tm                                  dtype=object       unique=30         missing=  0.00% sample=['LAL', 'HOU', 'GSW']
+  Opp                                 dtype=object       unique=30         missing=  0.00% sample=['GSW', 'OKC', 'LAL']
+  Result                              dtype=object       unique=2          missing=  0.00% sample=['L', 'L', 'W']
+  MP                                  dtype=object       unique=2,657      missing=  0.00% sample=['40:59', '48:53', '34:44']
+  FG                                  dtype=float64      unique=21         missing=  0.00% sample=['17.0', '12.0', '7.0']
+  FGA                                 dtype=float64      unique=37         missing=  0.00% sample=['27.0', '24.0', '14.0']
+  FG%                                 dtype=float64      unique=189        missing=  5.26% sample=['0.63', '0.5', '0.5']
+  3P                                  dtype=float64      unique=13         missing=  0.00% sample=['2.0', '5.0', '1.0']
+  3PA                                 dtype=float64      unique=23         missing=  0.00% sample=['10.0', '8.0', '2.0']
+  3P%                                 dtype=float64      unique=78         missing= 20.11% sample=['0.2', '0.625', '0.5']
+  FT                                  dtype=float64      unique=24         missing=  0.00% sample=['7.0', '10.0', '16.0']
+  FTA                                 dtype=float64      unique=27         missing=  0.00% sample=['10.0', '11.0', '16.0']
+  FT%                                 dtype=float64      unique=72         missing= 44.18% sample=['0.7', '0.909', '1.0']
+  ORB                                 dtype=float64      unique=13         missing=  0.00% sample=['0.0', '4.0', '2.0']
+  DRB                                 dtype=float64      unique=20         missing=  0.00% sample=['12.0', '7.0', '3.0']
+  TRB                                 dtype=float64      unique=25         missing=  0.00% sample=['12.0', '11.0', '5.0']
+  AST                                 dtype=float64      unique=22         missing=  0.00% sample=['9.0', '7.0', '4.0']
+  STL                                 dtype=float64      unique=9          missing=  0.00% sample=['2.0', '2.0', '1.0']
+  BLK                                 dtype=float64      unique=11         missing=  0.00% sample=['1.0', '1.0', '0.0']
+  TOV                                 dtype=float64      unique=12         missing=  0.00% sample=['3.0', '4.0', '1.0']
+  PF                                  dtype=float64      unique=7          missing=  0.00% sample=['1.0', '5.0', '4.0']
+  PTS                                 dtype=float64      unique=59         missing=  0.00% sample=['43.0', '39.0', '31.0']
+  +/-                                 dtype=float64      unique=96         missing=  0.10% sample=['-8.0', '9.0', '20.0']
+  GmSc                                dtype=float64      unique=482        missing=  0.00% sample=['38.9', '33.1', '27.5']
+  Date                                dtype=object       unique=212        missing=  0.00% sample=['2025-10-21', '2025-10-21', '2025-10-21']
+  Unnamed: 0                          dtype=float64      unique=0          missing=100.00% sample=[]
+  Unnamed: 1                          dtype=float64      unique=0          missing=100.00% sample=[]
+  Unnamed: 2                          dtype=float64      unique=0          missing=100.00% sample=[]
+
+POTENTIAL KEY / RELATIONSHIP COLUMNS:
+['Date']
+
+DUPLICATES:
+  Exact duplicate rows: 0
+  Date: 28,504 duplicated values
+
+PLAYER-RELATED COLUMNS:
+['Player']
+
+DATE/TIME COLUMNS:
+  Date: ['2025-10-21', '2025-10-21', '2025-10-21', '2025-10-21', '2025-10-21']
+
+NUMERIC COLUMNS:
+['FG', 'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', '+/-', 'GmSc', 'Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2']
+
+
+
+====================================================================================================
+DATASET SUMMARY
+====================================================================================================
+                           file    rows  columns game_id  unique_games player_id team_id  exact_duplicates
+                      Games.csv   73279       23  gameId       73279.0      None    None                 0
+        LeagueSchedule24_25.csv    1408       15  gameId        1408.0      None    None                 0
+        LeagueSchedule25_26.csv    1400       17  gameId        1400.0      None    None                 0
+  NBAPlayersStatistics23:24.csv   28346       25    None           NaN      None    None               516
+           PlayerStatistics.csv 1669922       40  gameId       73471.0      None    None                 0
+   PlayerStatisticsExtended.csv  838803      110  gameId       40024.0      None    None                 0
+                    Players.csv    6692       20    None           NaN      None    None                 0
+              TeamHistories.csv     140        7    None           NaN      None  teamId                 0
+             TeamStatistics.csv  146560       59  gameId       73279.0      None  teamId                 0
+     TeamStatisticsExtended.csv   79724      104  gameId       39862.0      None  teamId                 0
+nba_dailyleaders_full_24_25.csv   28265       27    None           NaN      None    None                 0
+ nba_dailyleaders_full_2526.csv   28716       29    None           NaN      None    None                 0
